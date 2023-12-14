@@ -1,0 +1,80 @@
+// Java implementation of Adapter pattern
+
+interface LaptopAdapter
+{
+    // birds implement Bird interface that allows
+    // them to fly and make sounds adaptee interface
+    public void charge();
+
+}
+
+class Laptop  implements LaptopAdapter
+{
+    // a concrete implementation of bird
+    public void charge()
+    {
+        System.out.println("Laptop");
+    }
+
+}
+
+interface RefrigeratorAdapter
+{
+    // birds implement Bird interface that allows
+    // them to fly and make sounds adaptee interface
+    public void startCooling();
+
+}
+
+class Refrigerator  implements RefrigeratorAdapter
+{
+    // a concrete implementation of bird
+    public void startCooling()
+    {
+        System.out.println("Refrigerator");
+    }
+
+}
+
+interface SmartphoneAdapter
+{
+    // birds implement Bird interface that allows
+    // them to fly and make sounds adaptee interface
+    public void chargePhone();
+
+}
+
+class SmartphoneCharger  implements SmartphoneAdapter
+{
+    // a concrete implementation of bird
+    public void chargePhone()
+    {
+        System.out.println("Smartphone");
+    }
+
+}
+
+
+class Main
+{
+    public static void main(String args[])
+    {
+        Laptop laptop = new Laptop ();
+        Refrigerator refrigerator = new Refrigerator ();
+        SmartphoneCharger smartphoneCharger = new SmartphoneCharger();
+
+        // Wrap a bird in a birdAdapter so that it
+        // behaves like toy duck
+
+
+        System.out.println("CHARGING...");
+        laptop.charge();
+
+        System.out.println("StartCooling...");
+        refrigerator.startCooling();
+
+        System.out.println("Charging...");
+        smartphoneCharger.chargePhone();
+
+    }
+}
