@@ -194,14 +194,7 @@ Account is now closed.
 Cannot deposit into a closed account.
 ```
 
-### Explanation:
-- The `Account` class delegates all state-specific behavior to the current `AccountState` object.
-- Each state (`OpenState`, `SuspendedState`, `ClosedState`) implements the `AccountState` interface and defines behavior specific to that state.
-- The state transitions are handled by the `Account` class, which updates its state based on the actions performed.
 
-This design allows for easy addition of new states and ensures that the behavior of the `Account` class changes dynamically based on its current state.The State Design Pattern is a behavioral design pattern that allows an object to change its behavior when its internal state changes. This pattern is useful when an object needs to change its behavior based on its state, and you want to avoid large conditional statements.
-
-Below is an example of how you can implement the State Design Pattern in Java for managing accounts with three states: `Open`, `Closed`, and `Suspended`.
 
 ### Step 1: Define the State Interface
 The `AccountState` interface defines the methods that all concrete states must implement.
